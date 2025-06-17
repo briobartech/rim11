@@ -3,17 +3,7 @@ import styled from 'styled-components'
 function App () {
   return (
     <StyledBG>
-      <div className='title'>
-        <h1>RIM11</h1>
-        <div className='banner-box'>
-          <img
-            className='banner'
-            src='src\assets\img\banner.webp'
-            alt=''
-            srcset=''
-          />
-        </div>
-      </div>
+      
     </StyledBG>
   )
 }
