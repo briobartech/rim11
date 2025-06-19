@@ -30,7 +30,7 @@ const StyledBanner = styled.div`
     background: linear-gradient(
       to bottom,
       rgba(255,255,255,0) 60%,
-      rgba(255,255,255,1) 100%
+#F5AA45 100%
     );
   }
 `
