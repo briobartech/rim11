@@ -1,6 +1,9 @@
 import styled from 'styled-components'
 import { texts } from '../assets/text.js'
 import { themeData } from '../assets/colors.js'
+import Title from './title.jsx'
+import Banner from './banner.jsx'
+import NavBar from './navbar.jsx'
 
 const colors = themeData
 
@@ -8,8 +11,15 @@ function HomeContent () {
   return (
     <HomeContentStyled>
       <div className='home-content'>
-        <h2 className='sub-title'>Bienvenido al Rim11 APP</h2>
-        <p>${texts.home}</p>
+        <div className='app-container'>
+          <div className='app-header'>
+            <Title props='Rim11' />
+            <Banner />
+          </div>
+          <h2 className='sub-title'>Bienvenido al Rim11 APP</h2>
+          <p>${texts.home}</p>
+          <NavBar />
+        </div>
       </div>
     </HomeContentStyled>
   )

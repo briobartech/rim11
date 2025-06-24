@@ -1,23 +1,21 @@
 import Banner from './components/banner.jsx'
 import NavBar from './components/navbar.jsx'
 import styled from 'styled-components'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ScannerPage from './components/scanner-page.jsx'
 import HomeContent from './components/home-content.jsx'
 import { themeData } from './assets/colors.js'
 import Title from './components/title.jsx'
 function App () {
   return (
     <>
-
       <AppStyled>
-        <div className='app-container'>
-          <div className='app-header'>
-            <Title props='Rim11' />
-            <Banner />
-            <HomeContent />
-          </div>
-
-          <NavBar />
-        </div>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<HomeContent />} />
+            <Route path='/scanner' element={<ScannerPage />} />
+          </Routes>
+        </BrowserRouter>
       </AppStyled>
     </>
   )

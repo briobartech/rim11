@@ -7,6 +7,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import styled from 'styled-components'
 import { themeData } from '../assets/colors.js'
+import { Link } from 'react-router-dom';
 
 const colors = themeData
 
@@ -21,7 +22,8 @@ function NavBar () {
           <li>
             <FontAwesomeIcon icon={faUser} />
           </li>
-          <li>Tour</li>
+
+          <li><Link to="/scanner">TOUR</Link></li>
           <li>
             <FontAwesomeIcon icon={faCircleInfo} />
           </li>
