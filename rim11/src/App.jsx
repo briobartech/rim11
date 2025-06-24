@@ -4,8 +4,9 @@ import styled from 'styled-components'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ScannerPage from './components/scanner-page.jsx'
 import HomeContent from './components/home-content.jsx'
-import { themeData } from './assets/colors.js'
+import { themeData2 } from './assets/colors.js'
 import Title from './components/title.jsx'
+const color = themeData2
 function App () {
   return (
     <>
@@ -40,6 +41,6 @@ const AppStyled = styled.div`
     align-items: center;
     justify-content: space-between;
     height: 1920px;
-    background-color: ${themeData.background};
+    background-color: ${color.background};
   }
 `
