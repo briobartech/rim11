@@ -7,12 +7,6 @@ import Title from './components/title.jsx'
 function App () {
   return (
     <>
-      <BrowserRouter>
-        <Routes>
-          <Route path='/' element={<Home />} />
-          <Route path='/scanner' element={<Scanner />} />
-        </Routes>
-      </BrowserRouter>
 
       <AppStyled>
         <div className='app-container'>

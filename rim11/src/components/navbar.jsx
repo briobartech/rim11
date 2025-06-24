@@ -2,14 +2,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faCircleInfo, faHouse, faUser } from '@fortawesome/free-solid-svg-icons';
 import styled from 'styled-components'
 import { themeData } from '../assets/colors.js';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function NavBar () {
   return (
     <StyledNavBar>
     <div className='navbar-box'>
       <ul className='navbar-list'>
-        <li><Link to="/"><FontAwesomeIcon icon={faHouse} /></Link></li>
+        <li><FontAwesomeIcon icon={faHouse} /></li>
         <li><FontAwesomeIcon icon={faUser} /></li>
         <li>Tour</li>
         <li><FontAwesomeIcon icon={faCircleInfo} /></li>

@@ -1,12 +1,10 @@
 import styled from 'styled-components'
-import Scanner from './scanner.jsx'
 
 function ScannerPage () {
   return (
     <>
       <StyledScannerPage>
         <div className='scanner-container'>
-          <Scanner />
         </div>
       </StyledScannerPage>
     </>
