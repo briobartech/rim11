@@ -5,7 +5,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ScannerPage from './components/scanner-page.jsx'
 import HomeContent from './components/home-content.jsx'
 import { themeData2 } from './assets/colors.js'
-import Title from './components/title.jsx'
 const color = themeData2
 function App () {
   return (

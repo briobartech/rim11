@@ -7,6 +7,7 @@ import {
 } from '@fortawesome/free-solid-svg-icons'
 import styled from 'styled-components'
 import { themeData2 } from '../assets/colors.js'
+import { Link } from 'react-router-dom';
 
 const colors = themeData2
 
@@ -53,5 +54,6 @@ const StyledNavBar = styled.div`
     align-items: center;
     justify-content: space-around;
     width: 100%;
+    color: ${colors.icons};
   }
 `
