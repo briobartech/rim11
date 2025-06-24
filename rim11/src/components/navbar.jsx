@@ -6,9 +6,9 @@ import {
   faUser
 } from '@fortawesome/free-solid-svg-icons'
 import styled from 'styled-components'
-import { themeData } from '../assets/colors.js'
+import { themeData2 } from '../assets/colors.js'
 
-const colors = themeData
+const colors = themeData2
 
 function NavBar () {
   return (

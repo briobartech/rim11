@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { themeData } from '../assets/colors'
-const color = themeData
+import { themeData2 } from '../assets/colors'
+const color = themeData2
 function Banner () {
   return (
     <StyledBanner>

@@ -1,6 +1,6 @@
 import { styled } from 'styled-components'
-import { themeData } from '../assets/colors.js'
-const colors = themeData
+import { themeData2 } from '../assets/colors.js'
+const colors = themeData2
 
 function Title ({ props }) {
   return (
