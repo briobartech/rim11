@@ -8,7 +8,7 @@ import {
 import styled from 'styled-components'
 import { themeData2 } from '../assets/colors.js'
 import { Link } from 'react-router-dom';
-
+import ScanButton from './scan-btn.jsx'
 const colors = themeData2
 
 function NavBar () {
@@ -17,13 +17,13 @@ function NavBar () {
       <div className='navbar-box'>
         <ul className='navbar-list'>
           <li>
-            <FontAwesomeIcon icon={faHouse} />
+           <Link to="/"> <FontAwesomeIcon icon={faHouse} /></Link>
           </li>
           <li>
             <FontAwesomeIcon icon={faUser} />
           </li>
 
-          <li><Link to="/scanner">TOUR</Link></li>
+          <li className='scan-btn'><Link to="/scanner"><ScanButton/></Link></li>
           <li>
             <FontAwesomeIcon icon={faCircleInfo} />
           </li>
@@ -38,9 +38,12 @@ function NavBar () {
 
 export default NavBar
 const StyledNavBar = styled.div`
+.navbar-list li svg {
+    font-size: 64px;
+  }
   .navbar-box {
     width: 1080px;
-    height: 60px;
+    height: 128px;
     background-color: ${colors.secondary};
     display: flex;
     flex-direction: row;
@@ -55,5 +58,9 @@ const StyledNavBar = styled.div`
     justify-content: space-around;
     width: 100%;
     color: ${colors.icons};
+  }
+  .scan-btn{
+  position: relative;
+  bottom: 40px;
   }
 `

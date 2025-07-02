@@ -1,30 +1,72 @@
-import styled from 'styled-components'
-import { themeData } from '../assets/colors'
+import styled from "styled-components";
+import { themeData2 } from "../assets/colors";
+import Scanner from "./scanner";
+import { Link } from "react-router-dom";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ScannedContent from "./scanned-content";
+import { useContext } from "react";
+import { AppContext } from "./app-context.jsx";
+import { images } from "../assets/sources.js";
+import NavBar from "./navbar";
+const colors = themeData2;
 
-const colors = themeData
+function ScannerPage() {
+  const qrManager = useContext(AppContext);
 
-function ScannerPage () {
+  const handleScan = (data) => {
+    console.log(images[data] ? true : false);
+    return images[data] ? true : false;
+  };
+
   return (
     <>
       <StyledScannerPage>
-        <div className='scanner-container'>
-          <h2>Scanner Page</h2>
-          <p>Here you can implement your scanner functionality.</p>
+        <div className="nav-bar">
+          {" "}
+          <li>
+            <Link to="/scanner" onClick={() => qrManager.setQrData("")}>
+              <FontAwesomeIcon icon={faArrowLeft} />
+            </Link>
+          </li>
         </div>
+        <div className="scanner-container">
+          {handleScan(qrManager.qrData) ? (
+            <ScannedContent id={qrManager.qrData} />
+          ) : (
+            <Scanner></Scanner>
+          )}
+        </div>
+        <NavBar></NavBar>
       </StyledScannerPage>
     </>
-  )
+  );
 }
-export default ScannerPage
+export default ScannerPage;
 
 const StyledScannerPage = styled.div`
+  .nav-bar li svg {
+    font-size: 32px;
+  }
+  .nav-bar {
+    display: flex;
+    width: 100%;
+    height: 64px;
+    background-color: ${colors.background};
+  }
+  .nav-bar li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+  }
   .scanner-container {
     width: 100%;
     background-color: ${colors.background};
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
     height: 100vh;
   }
-`
+`;

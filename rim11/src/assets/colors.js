@@ -15,6 +15,6 @@ export const themeData2 = {
     accent: '#0086C3',
     background: '#63BBE7',
     icons: '#005586',
-    text1: '#F0C20C',
-    text2: '#F0C20C',
-    text3: '#F0C20C'}
+    text1: '#04344A',
+    text2: '#04344A',
+    text3: '#fff'}
