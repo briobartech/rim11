@@ -8,7 +8,7 @@ import { AppContext } from "./app-context.jsx";
 
 function HomeContent() {
   return (
-    <HomeContentStyled $themeData={useContext(AppContext).themeData}>
+    <HomeContentStyled  $textStyle={useContext(AppContext).textStyle} $themeData={useContext(AppContext).themeData}>
       <div className="home-content">
         <div className="app-container">
           <div className="app-header">
@@ -16,7 +16,7 @@ function HomeContent() {
             <Banner />
           </div>
           <h2 className="sub-title">Bienvenido al Rim11 APP</h2>
-          <p className="text-content">{texts.home}</p>
+          <p  className="text-content">{texts.home[useContext(AppContext).languaje]}</p>
           <NavBar />
         </div>
       </div>
@@ -42,11 +42,13 @@ const HomeContentStyled = styled.div`
  .text-content{
     background-color: ${({ $themeData }) => $themeData.background};
     color: ${({ $themeData }) => $themeData.text3};
-    font-size: 1.5em;
-    font-weight: 400;
-    font-family: "Jockey One", sans;
-    
+    font-size: ${({$textStyle}) => $textStyle.content['font-size']};
+    font-weight: ${({$textStyle}) => $textStyle.content['font-weight']};
+    font-family: ${({$textStyle}) => $textStyle.content['font-family']};
+    line-height: ${({$textStyle}) => $textStyle.content['line-height']};
+    padding: 10%;
     min-height: 300px;
+    text-indent: 56px;
   }
   .sub-title {
     font-family: "Jockey One", sans-serif;

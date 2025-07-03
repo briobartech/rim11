@@ -8,11 +8,14 @@ import {
 import styled from 'styled-components'
 import { Link } from 'react-router-dom';
 import ScanButton from './scan-btn.jsx'
-import { useContext } from 'react';
+import { useContext, useState } from 'react';
 import { AppContext } from './app-context.jsx';
-import { themeData } from '../assets/colors.js';
+import MenuPage from './menu-page.jsx';
+
 
 function NavBar () {
+  const [showMenu, setShowMenu] = useState(false);
+
   return (
     <StyledNavBar $themeData={useContext(AppContext).themeData}>
       <div className='navbar-box'>
@@ -29,9 +32,12 @@ function NavBar () {
             <FontAwesomeIcon icon={faCircleInfo} />
           </li>
           <li>
-            <FontAwesomeIcon icon={faBars} />
+            <span onClick={() => setShowMenu(!showMenu)} style={{cursor: "pointer"}}>
+              <FontAwesomeIcon icon={faBars} />
+            </span>
           </li>
         </ul>
+         {showMenu && <MenuPage onClose={() => setShowMenu(false)} />}
       </div>
     </StyledNavBar>
   )

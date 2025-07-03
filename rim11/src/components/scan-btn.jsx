@@ -25,6 +25,7 @@ function ScanButton() {
 export default ScanButton;
 
 const StyledScanButton = styled.div`
+z-index: 1;
   position: absolute;
   left: 50%;
   bottom: 30px;
