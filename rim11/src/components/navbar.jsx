@@ -6,14 +6,15 @@ import {
   faUser
 } from '@fortawesome/free-solid-svg-icons'
 import styled from 'styled-components'
-import { themeData2 } from '../assets/colors.js'
 import { Link } from 'react-router-dom';
 import ScanButton from './scan-btn.jsx'
-const colors = themeData2
+import { useContext } from 'react';
+import { AppContext } from './app-context.jsx';
+import { themeData } from '../assets/colors.js';
 
 function NavBar () {
   return (
-    <StyledNavBar>
+    <StyledNavBar $themeData={useContext(AppContext).themeData}>
       <div className='navbar-box'>
         <ul className='navbar-list'>
           <li>
@@ -44,7 +45,7 @@ const StyledNavBar = styled.div`
   .navbar-box {
     width: 1080px;
     height: 128px;
-    background-color: ${colors.secondary};
+    background-color: ${({$themeData}) => $themeData.secondary};
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -57,10 +58,24 @@ const StyledNavBar = styled.div`
     align-items: center;
     justify-content: space-around;
     width: 100%;
-    color: ${colors.icons};
+    color: ${({$themeData}) => $themeData.icons};
   }
   .scan-btn{
   position: relative;
   bottom: 40px;
+  }
+
+   .navbar-list a {
+    color: ${({ $themeData }) => $themeData.icons};
+    text-decoration: none;
+  }
+  .navbar-list a:visited {
+    color: ${({ $themeData }) => $themeData.icons};
+  }
+  .navbar-list a:active {
+    color: ${({ $themeData }) => $themeData.icons};
+  }
+  .navbar-list a:hover {
+    color: ${({ $themeData }) => $themeData.text1}; /* o el color que prefieras al pasar el mouse */
   }
 `

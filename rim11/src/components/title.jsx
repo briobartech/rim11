@@ -1,11 +1,11 @@
 import { styled } from 'styled-components'
-import { themeData2 } from '../assets/colors.js'
-const colors = themeData2
+import { useContext } from 'react'
+import { AppContext } from './app-context.jsx'
 
-function Title ({ props }) {
+function Title () {
   return (
-    <StyledTitle>
-      <h1>{props}</h1>
+    <StyledTitle $themeData={useContext(AppContext).themeData}>
+      <h1>Rim11</h1>
     </StyledTitle>
   )
 }
@@ -14,5 +14,5 @@ const StyledTitle = styled.div`
   font-family: 'Jockey One', sans-serif;
   font-size: 4em;
   padding: 20px;
-  color: ${colors.text1};
+  color: ${({$themeData}) => $themeData.title};
 `

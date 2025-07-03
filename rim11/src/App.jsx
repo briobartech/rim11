@@ -4,12 +4,14 @@ import styled from 'styled-components'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ScannerPage from './components/scanner-page.jsx'
 import HomeContent from './components/home-content.jsx'
-import { themeData2 } from './assets/colors.js'
-const color = themeData2
+import { useContext } from 'react'
+import { AppContext } from './components/app-context.jsx'
+
+
 function App () {
   return (
     <>
-      <AppStyled>
+      <AppStyled $themeData={useContext(AppContext).themeData}>
         <BrowserRouter>
           <Routes>
             <Route path='/' element={<HomeContent />} />
@@ -24,12 +26,14 @@ function App () {
 export default App
 
 const AppStyled = styled.div`
+
   .app-header {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    width: 1080px;
+    width:100%;
+    max-width: 1080px;
     margin: 0 auto;
   }
   .app-container {
@@ -39,7 +43,7 @@ const AppStyled = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 1920px;
-    background-color: ${color.background};
+ 
+    background-color: ${({$themeData}) => $themeData.background};
   }
 `

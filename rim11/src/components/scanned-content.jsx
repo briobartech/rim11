@@ -1,7 +1,8 @@
 import styled from "styled-components";
 import { images } from "../assets/sources";
-import { themeData } from "../assets/colors.js";
-const colors = themeData;
+import { useContext } from "react";
+import { AppContext } from "./app-context";
+AppContext
 function ScannedContent({ id }) {
   const content = images[id];
 
@@ -10,7 +11,7 @@ function ScannedContent({ id }) {
   }
 
   return (
-    <ScannedContentStyled>
+    <ScannedContentStyled $themeData={useContext(AppContext).themeData}>
       <div className="scanned-content">
         <img src={content.path} alt={content.title} />
         <h2>{content.title}</h2>
@@ -27,7 +28,7 @@ const ScannedContentStyled = styled.div`
 flex-direction: column; 
 align-items: center;
 justify-content: center;
-height: 100vh;}
+}
   img {
     width: 60%;
   }
@@ -35,13 +36,13 @@ height: 100vh;}
     width: 50%;
     text-align: center;
     font-size: 3em;
-    color: ${colors.text1};
+    color: ${({$themeData})=> $themeData.text1};
     margin: 20px;
     }
     p {
     width: 50%;
     text-align: center; 
     font-size: 2em;
-    color: ${colors.text1};};
+    color: ${({$themeData})=> $themeData.text1};};
     padding: 0 20px;}
 `;

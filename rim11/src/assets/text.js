@@ -4,3 +4,11 @@ export const texts = {
 Bajo el mando del Tte. Cnel. Las Heras, combatió en campañas libertadoras como Chacabuco y Maipú, ganándose el apodo de “Los Leones de Las Heras”.
 
 Con 200 años de historia, sigue siendo símbolo de valor y tradición en el Ejército Argentino.`}
+
+
+export const textStyle = {
+    content : {"font-size": "2.2em",
+        "line-height": "2.5",
+"font-family": "'Jockey One', sans-serif"
+    }
+}

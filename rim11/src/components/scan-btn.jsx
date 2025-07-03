@@ -1,12 +1,13 @@
 import styled from "styled-components";
 import { themeData } from "../assets/colors.js";
 import QRCodeIcon from "./qr-icon.jsx";
+import { useContext } from "react";
+import { AppContext } from "./app-context.jsx";
 
-const colors = themeData;
 
 function ScanButton() {
   return (
-    <StyledScanButton>
+    <StyledScanButton $themeData={useContext(AppContext).themeData}>
       <div className="tour-btn">
         <div className="corners">
           <span className="corner tl"></span>
@@ -14,7 +15,7 @@ function ScanButton() {
           <span className="corner bl"></span>
           <span className="corner br"></span>
         </div>
-        <QRCodeIcon className="qr-bg" size={118} color={colors.text1} />
+        <QRCodeIcon className="qr-bg" size={118} color={useContext(AppContext).themeData.text1} />
         <div className="tour-text">TOUR</div>
       </div>
     </StyledScanButton>
@@ -57,7 +58,7 @@ const StyledScanButton = styled.div`
     position: absolute;
     width: 48px;
     height: 48px;
-    border: 5px solid #5b8c6a;
+    border: 5px solid ${({ $themeData }) => $themeData.icons};
     border-radius: 0;
   }
 

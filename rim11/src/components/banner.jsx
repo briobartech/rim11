@@ -1,14 +1,18 @@
-import styled from 'styled-components'
-import { themeData2 } from '../assets/colors'
-const color = themeData2
-function Banner () {
+import styled from "styled-components";
+import { useContext } from "react";
+import { AppContext } from "./app-context.jsx";
+
+
+function Banner() {
+  
   return (
-    <StyledBanner>
-      <img src='src\assets\img\banner.webp' alt='Banner' />
+    <StyledBanner $themeData={useContext(AppContext).themeData}>
+      <img src="src\assets\img\banner.webp" alt="Banner" />
     </StyledBanner>
-  )
+  );
 }
-export default Banner
+
+export default Banner;
 const StyledBanner = styled.div`
   position: relative;
   width: 1080px;
@@ -23,7 +27,7 @@ const StyledBanner = styled.div`
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     left: 0;
     top: 0;
@@ -34,7 +38,7 @@ const StyledBanner = styled.div`
     background: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0) 60%,
-      ${color.primary} 100%
+      ${({ $themeData }) => $themeData.primary}  100%
     );
   }
-`
+`;

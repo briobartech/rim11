@@ -1,5 +1,6 @@
 import { createContext, useState } from "react";
-
+import { themeData } from "../assets/colors";
+import { textStyle } from "../assets/text";
 export const AppContext = createContext();
 
 export function AppContextProvider(props) {
@@ -18,6 +19,8 @@ export function AppContextProvider(props) {
         handleScan: handleScan,
         qrData: result,
         setQrData: setResult,
+        themeData: themeData,
+        textStyle: textStyle
       }}
     >
       {props.children}

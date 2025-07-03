@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { themeData2 } from "../assets/colors";
 import Scanner from "./scanner";
 import { Link } from "react-router-dom";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
@@ -9,7 +8,6 @@ import { useContext } from "react";
 import { AppContext } from "./app-context.jsx";
 import { images } from "../assets/sources.js";
 import NavBar from "./navbar";
-const colors = themeData2;
 
 function ScannerPage() {
   const qrManager = useContext(AppContext);
@@ -21,14 +19,18 @@ function ScannerPage() {
 
   return (
     <>
-      <StyledScannerPage>
+      <StyledScannerPage $themeData={useContext(AppContext).themeData}>
         <div className="nav-bar">
-          {" "}
-          <li>
-            <Link to="/scanner" onClick={() => qrManager.setQrData("")}>
-              <FontAwesomeIcon icon={faArrowLeft} />
-            </Link>
-          </li>
+          {handleScan(qrManager.qrData) ? (
+            <li>
+              <Link to="/scanner" onClick={() => qrManager.setQrData("")}>
+                <FontAwesomeIcon icon={faArrowLeft} />
+              </Link>
+            </li>
+          ) : (
+            <></>
+          )}
+          
         </div>
         <div className="scanner-container">
           {handleScan(qrManager.qrData) ? (
@@ -45,6 +47,15 @@ function ScannerPage() {
 export default ScannerPage;
 
 const StyledScannerPage = styled.div`
+width: 100%;
+max-width:1080px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background-color: ${({ $themeData }) => $themeData.background};
+
   .nav-bar li svg {
     font-size: 32px;
   }
@@ -52,7 +63,7 @@ const StyledScannerPage = styled.div`
     display: flex;
     width: 100%;
     height: 64px;
-    background-color: ${colors.background};
+    background-color: ${({ $themeData }) => $themeData.background};
   }
   .nav-bar li {
     display: flex;
@@ -62,11 +73,26 @@ const StyledScannerPage = styled.div`
   }
   .scanner-container {
     width: 100%;
-    background-color: ${colors.background};
+    max-width:1080px;
+    background-color: ${({ $themeData }) => $themeData.background};
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: start;
-    height: 100vh;
+  }
+
+  .nav-bar a {
+    color: ${({ $themeData }) => $themeData.icons};
+    text-decoration: none;
+  }
+  .nav-bar a:visited {
+    color: ${({ $themeData }) => $themeData.icons};
+  }
+  .nav-bar a:active {
+    color: ${({ $themeData }) => $themeData.icons};
+  }
+  .nav-bar a:hover {
+    color: ${({ $themeData }) =>
+      $themeData.text1}; /* o el color que prefieras al pasar el mouse */
   }
 `;

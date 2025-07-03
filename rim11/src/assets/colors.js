@@ -1,13 +1,14 @@
 
 export const themeData = {
-    primary: '#F5AA45',
-    secondary: '#F8C78D',
-    accent: '#6F9A7C',
-    background: '#F5AA45',
-    icons: '63BBE7',
-    text1: '#04344A',
-    text2: '#FFEEDA',
-    text3: '#B8502B'}
+    primary: '#F5AA45',// Naranja fuerte
+    secondary: '#F8C78D', // Naranja claro
+    accent: '#6F9A7C', // Verde
+    background: '#F5AA45',  // Naranja fuerte
+    icons: '#6F9A7C', // Verde
+    title: '#04344A', // Azul oscuro
+    text1: '#04344A', // Azul oscuro
+    text2: '#FFEEDA', // Beige claro
+    text3: '#B8502B'} // Naranja oscuro 
     
 export const themeData2 = {
     primary: '#63BBE7',
