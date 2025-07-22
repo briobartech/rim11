@@ -24,12 +24,12 @@ function NavBar () {
            <Link to="/"> <FontAwesomeIcon icon={faHouse} /></Link>
           </li>
           <li>
-            <FontAwesomeIcon icon={faUser} />
+            <Link to="/contact"><FontAwesomeIcon icon={faUser} /></Link>
           </li>
 
           <li className='scan-btn'><Link to="/scanner"><ScanButton/></Link></li>
           <li>
-            <FontAwesomeIcon icon={faCircleInfo} />
+            <Link to="/info"><FontAwesomeIcon icon={faCircleInfo} /></Link>
           </li>
           <li>
             <span onClick={() => setShowMenu(!showMenu)} style={{cursor: "pointer"}}>

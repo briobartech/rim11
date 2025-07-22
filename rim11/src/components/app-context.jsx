@@ -8,7 +8,7 @@ const LANGS = ["spanish", "english", "portugues"];
 export function AppContextProvider(props) {
 
   
-  const [result, setResult] = useState("00001");
+  const [result, setResult] = useState("");
   const handleScan = (data) => {
     if (data) setResult(data.text);
   };

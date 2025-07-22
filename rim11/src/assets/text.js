@@ -1,3 +1,4 @@
+import {leerCSV} from './csv_to_array.js'
 export const texts = {
   home: {
     spanish: `Fundado el 8 de noviembre de 1825 por iniciativa del Gral. San Martín, el RIM 11 fue una pieza clave del Ejército de los Andes. 
@@ -15,9 +16,16 @@ With 200 years of history, it remains a symbol of valor and tradition in the Arg
 Sob o comando do Tenente-Coronel Las Heras, combateu em campanhas libertadoras como Chacabuco e Maipú, ganhando o apelido de “Os Leões de Las Heras.”
 
 Com 200 anos de história, continua sendo um símbolo de coragem e tradição no Exército Argentino.`
-  }
+  },
+  info: 'Esta es la información sobre el rim 11'
 }
 
+
+export const contactInfo = {
+  email:leerCSV('./contact-info.csv', (datos) => datos[0]),
+  telefono:leerCSV('./contact-info.csv', (datos) => datos[1])
+
+}
 export const textStyle = {
   content: {
     'font-size': '2.2em',
