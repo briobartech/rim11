@@ -1,4 +1,5 @@
-import {leerCSV} from './csv_to_array.js'
+import { readCSVtoArray } from './csv_to_array.js'
+
 export const texts = {
   home: {
     spanish: `Fundado el 8 de noviembre de 1825 por iniciativa del Gral. San Martín, el RIM 11 fue una pieza clave del Ejército de los Andes. 
@@ -20,17 +21,17 @@ Com 200 anos de história, continua sendo um símbolo de coragem e tradição no
   info: 'Esta es la información sobre el rim 11'
 }
 
+export const contactData = readCSVtoArray('/src/assets/contact-info.csv').then(data => {
+  return data[0]  // Assuming the CSV has a single row with contact info
+})
 
-export const contactInfo = {
-  email:leerCSV('./contact-info.csv', (datos) => datos[0]),
-  telefono:leerCSV('./contact-info.csv', (datos) => datos[1])
-
-}
 export const textStyle = {
   content: {
     'font-size': '2.2em',
     'line-height': '2.0',
     'font-family': "'Jockey One', sans-serif",
-    'font-weight': '400'
+    'font-weight': '400',
+    'font-size3': '3em',
+    'font-size4': '4em'
   }
 }

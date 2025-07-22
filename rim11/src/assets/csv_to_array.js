@@ -1,16 +1,24 @@
-function leerCSV(archivoCSV, callback) {
-  const lector = new FileReader();
+export async function readCSVtoArray(csvPath) {
+  const response = await fetch(csvPath);
+  const text = await response.text();
 
-  lector.onload = function(evento) {
-    const contenido = evento.target.result;
-    const lineas = contenido.split('\n');
-    const datos = lineas.map(linea => linea.split(','));
-    callback(datos); // Devuelve el array resultante
-  };
+  // Remove possible carriage returns and split into lines
+  const lines = text.replace(/\r/g, '').split('\n').filter(Boolean);
 
-  lector.onerror = function() {
-    console.error('Error al leer el archivo CSV');
-  };
+  // Get headers
+  const headers = lines[0].split(',').map(h => h.trim());
 
-  lector.readAsText(archivoCSV);
+  // Parse rows
+  const data = lines.slice(1).map(line => {
+    // Remove quotes and split by comma
+    const values = line.split(',').map(v => v.replace(/['"]/g, '').trim());
+    // Create object
+    return headers.reduce((obj, header, idx) => {
+      obj[header] = values[idx];
+      return obj;
+    }, {});
+  });
+
+  return data;
 }
+
