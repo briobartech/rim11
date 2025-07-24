@@ -38,7 +38,7 @@ const StyledBanner = styled.div`
     background: linear-gradient(
       to bottom,
       rgba(255, 255, 255, 0) 60%,
-      ${({ $themeData }) => $themeData.primary}  100%
+      ${({ $themeData }) => $themeData.background}  100%
     );
   }
 `;

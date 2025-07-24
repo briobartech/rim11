@@ -45,7 +45,7 @@ function Scanner() {
             <Result>{"Escanea un código QR"}</Result>
           </div>
         </StyledScanner>
-        <StyledInstructions $textStyle={useContext(AppContext).textStyle}>
+        <StyledInstructions $themeData={useContext(AppContext).themeData} $textStyle={useContext(AppContext).textStyle}>
           <p>
             1: Acepta los permisos para acceder a tú cámara
           </p>
@@ -71,11 +71,13 @@ function Scanner() {
 export default Scanner;
 
 const StyledInstructions = styled.div`
+color: ${({ $themeData }) => $themeData.text1};
 padding: 10%;
-font-size:  ${({$textStyle}) => $textStyle.content['font-size']};
+font-size:  ${({$textStyle}) => $textStyle.content['font-size2']};
 line-height: ${({$textStyle}) => $textStyle.content['line-height']};
 font-family: ${({$textStyle}) => $textStyle.content['font-family']};
 max-width: 1080px`;
+
 
 const StyledScanner = styled.div`
   display: flex;
@@ -86,6 +88,7 @@ const StyledScanner = styled.div`
 
   .scanner-container {
     background-color: ${({ $themeData }) => $themeData.background};
+    
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);

@@ -68,28 +68,38 @@ const ContactPageStyled = styled.div`
     flex-direction: column;
     align-items: start;
     justify-content: center;
+    width: 90%;
+    max-width: 1080px;
+
   }
   .title {
     font-family: ${({ $textStyle }) => $textStyle.content['font-family']};
     font-size: ${({ $textStyle }) => $textStyle.content['font-size4']};
     font-weight: ${({ $textStyle }) => $textStyle.content['font-weight']};
-    color: ${({ $themeData }) => $themeData.text3};
+    color: ${({ $themeData }) => $themeData.subtitle};
+    padding-top: 48px;
+    padding-bottom: 96px;
+    box-shadow: 0 4px 8px #0001;
+    text-shadow: 3px 3px 8px ${({ $themeData }) => $themeData.text3}4;
   }
     .contact-info {
     display: flex;
     flex-direction: column;
+    
    }
-
+  .contact-info p {
+    margin: 20px;
+  }
   .contact-info .item {
     font-family: ${({ $textStyle }) => $textStyle.content['font-family']};
-    font-size: ${({ $textStyle }) => $textStyle.content['font-size3']};
+    font-size: ${({ $textStyle }) => $textStyle.content['font-size4']};
     font-weight: ${({ $textStyle }) => $textStyle.content['font-weight']};
     color: ${({ $themeData }) => $themeData.text1};
     
   }
     .contact-info .value {
     font-family: ${({ $textStyle }) => $textStyle.content['font-family']};
-    font-size: ${({ $textStyle }) => $textStyle.content['font-size3']};
+    font-size: ${({ $textStyle }) => $textStyle.content['font-size4']};
     font-weight: ${({ $textStyle }) => $textStyle.content['font-weight']};
     color: ${({ $themeData }) => $themeData.text2};
     

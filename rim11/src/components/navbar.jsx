@@ -45,13 +45,14 @@ function NavBar () {
 
 export default NavBar
 const StyledNavBar = styled.div`
+z-index: 3;
 .navbar-list li svg {
     font-size: 64px;
   }
   .navbar-box {
     width: 1080px;
     height: 128px;
-    background-color: ${({$themeData}) => $themeData.secondary};
+    );
     display: flex;
     flex-direction: row;
     align-items: center;

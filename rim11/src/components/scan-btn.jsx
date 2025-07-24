@@ -15,7 +15,7 @@ function ScanButton() {
           <span className="corner bl"></span>
           <span className="corner br"></span>
         </div>
-        <QRCodeIcon className="qr-bg" size={118} color={useContext(AppContext).themeData.text1} />
+        <QRCodeIcon className="qr-bg" size={118} color={useContext(AppContext).themeData.background2} />
         <div className="tour-text">TOUR</div>
       </div>
     </StyledScanButton>
@@ -59,7 +59,7 @@ z-index: 1;
     position: absolute;
     width: 48px;
     height: 48px;
-    border: 5px solid ${({ $themeData }) => $themeData.icons};
+    border: 5px solid ${({ $themeData }) => $themeData.background2};
     border-radius: 0;
   }
 
@@ -97,7 +97,7 @@ z-index: 1;
     z-index: 3;
     font-size: 2em;
     font-family: sans-serif;
-    color: #1a3a3a;
+    color: ${({ $themeData }) => $themeData.background2};
     font-weight: 600;
     letter-spacing: 2px;
     margin: 0;

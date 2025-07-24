@@ -3,11 +3,11 @@ import styled from 'styled-components'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { useContext } from 'react'
-import { AppContext } from './app-context'
+import { AppContext } from './app-context.jsx'
 
 function MenuPage ({ onClose }) {
   return (
-    <MenuStyled $themeData={useContext(AppContext).themeData}>
+    <MenuStyled $textStyle={useContext(AppContext).textStyle} $themeData={useContext(AppContext).themeData}>
       <div className='menu-nav-bar'>
         <li onClick={onClose}>
           <FontAwesomeIcon icon={faArrowLeft} />
@@ -16,12 +16,25 @@ function MenuPage ({ onClose }) {
           className='languaje-btn'
           onClick={useContext(AppContext).setLanguaje}
         >
-          {useContext(AppContext).languaje}
+          {
+            (() => {
+              switch (useContext(AppContext).languaje) {
+                case "spanish":
+                  return "Español";
+                case "english":
+                  return "English";
+                case "portugues":
+                  return "Português";
+                default:
+                  return "Idioma no reconocido";
+              }
+            })()
+          }
         </li>
       </div>
       <MenuOptionsStyled $textStyle={useContext(AppContext).textStyle} $themeData={useContext(AppContext).themeData}>
         <ul className='menu-options'>
-          <li>Cambiar color</li>
+          <li onClick={useContext(AppContext).handleThemeChange}>{useContext(AppContext).themeData.name}</li>
           <li>Opción 2</li>
           <li>Opción 3</li>
           <li>Opción 4</li>
@@ -54,12 +67,12 @@ const MenuStyled = styled.div`
     color: ${({ $themeData }) => $themeData.text1};
     background: ${({ $themeData }) => $themeData.background};
   }
-  li:hover,
-  active {
+  li:hover {
     background: ${({ $themeData }) => $themeData.background};
   }
   .languaje-btn {
-    font-size: 2em;
+    font-size: ${({$textStyle}) => $textStyle.content['font-size2']};
+    color: ${({ $themeData }) => $themeData.text1};
     width: 240px;
     border: 5px solid ${({ $themeData }) => $themeData.text1};
     border-radius: 32px;
@@ -74,6 +87,7 @@ const MenuStyled = styled.div`
     text-transform: uppercase;
   }
   .menu-nav-bar {
+  padding-top: 32px;
     width: 100%;
     max-width: 1080px;
     display: flex;
@@ -99,7 +113,7 @@ const MenuOptionsStyled = styled.div`
   .menu-options li {
     background: ${({ $themeData }) => $themeData.secondary};
     color: ${({ $themeData }) => $themeData.text1};
-    font-size: 2em;
+    font-size: ${({$textStyle}) => $textStyle.content['font-size2']};
     font-family: ${({$textStyle}) => $textStyle.content['font-family']}; 
     border-radius: 20px;
     padding: 0;
@@ -114,9 +128,5 @@ const MenuOptionsStyled = styled.div`
     border: 2px solid ${({ $themeData }) => $themeData.text1};
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
-
-  .menu-options li:hover {
-    background: ${({ $themeData }) => $themeData.accent};
-    color: ${({ $themeData }) => $themeData.background};
-  }
+  
 `

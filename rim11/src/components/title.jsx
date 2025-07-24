@@ -4,7 +4,7 @@ import { AppContext } from './app-context.jsx'
 
 function Title () {
   return (
-    <StyledTitle $themeData={useContext(AppContext).themeData}>
+    <StyledTitle $textStyle={useContext(AppContext).textStyle} $themeData={useContext(AppContext).themeData}>
       <div className="title-container">
         <h1>Rim11</h1>
       </div>
@@ -21,8 +21,8 @@ const StyledTitle = styled.div`
   height: 120px;
   background-color: ${({$themeData}) => $themeData.background};
 }
-  font-family: 'Jockey One', sans-serif;
-  font-size: 4em;
+  font-family: ${({$textStyle}) => $textStyle.content['font-family']};
+  font-size: ${({$textStyle}) => $textStyle.content['font-size5']};
 
   color: ${({$themeData}) => $themeData.title};
  
