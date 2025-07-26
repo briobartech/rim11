@@ -1086,7 +1086,8 @@ max-width:1080px;
     background-color: ${({$themeData:e})=>e.background};
     .home-content {
     width: 100%;
-    height: 100hv;
+    height: 100vh;
+
     max-width: 1080px;
     max-height: 1920px;
     margin: 0 auto;
@@ -1095,7 +1096,8 @@ max-width:1080px;
 }
  .app-container{
     width: 100%;
-    height: 100hv;
+    height: 100vh;
+
     max-width: 1080px;
     max-height: 1920px;
     background-color: ${({$themeData:e})=>e.background};
@@ -1160,6 +1162,7 @@ max-width:1080px;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+
     margin: 0 auto;
   }
 
@@ -1211,7 +1214,8 @@ max-width:1080px;
   }
 `;function nb(){const[e,t]=F.useState(null);return F.useEffect(()=>{V6.then(n=>t(n))},[]),G.jsx(G.Fragment,{children:G.jsxs(rb,{$textStyle:F.useContext(St).textStyle,$themeData:F.useContext(St).themeData,children:[G.jsxs("div",{className:"contact-page-content",children:[G.jsx(U0,{}),G.jsxs("div",{className:"contact-page-container",children:[G.jsx("div",{className:"title",children:"Información de contacto"}),e?Object.entries(e).map(([n,r])=>G.jsxs("div",{className:"contact-info",children:[G.jsxs("p",{className:"item",children:[n,":"]},n),G.jsx("p",{className:"value",children:r},r)]},n)):"Loading..."]})]}),G.jsx(Cf,{})]})})}const rb=ge.div`
   width: 100%;
-  height: 100hv;
+  height: 100vh;
+
   max-width: 1080px;
   max-height: 1920px;
   display: flex;
