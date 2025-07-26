@@ -17,7 +17,7 @@ export function AppContextProvider(props) {
   useEffect(() => {
     const cargarDatos = async () => {
       // La ruta es relativa a la carpeta 'public'
-      const datosProcesados = await convertirCsvAObjeto("/public/bbdd.csv");
+      const datosProcesados = await convertirCsvAObjeto("/rim11/public/bbdd.csv");
       setDatos(datosProcesados);
       setCargando(false);
     };

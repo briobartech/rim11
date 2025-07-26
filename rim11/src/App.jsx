@@ -16,7 +16,7 @@ function App () {
       <AppStyled $themeData={useContext(AppContext).themeData}>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<HomeContent />} />
+            <Route path='/rim11' element={<HomeContent />} />
             <Route path='/scanner' element={<ScannerPage />} />
             <Route path='/info' element={<InfoPage />} />
             <Route path='/contact' element={<ContactPage />} />
