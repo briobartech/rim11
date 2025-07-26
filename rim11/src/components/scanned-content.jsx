@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import { images } from "../assets/sources";
 import { useContext } from "react";
 import { AppContext } from "./app-context";
 AppContext
 function ScannedContent({ id }) {
-  const content = images[id];
+  const content = useContext(AppContext).datos[id];
 
   if (!content) {
     return <div>ID no encontrado en sources.images</div>;
@@ -14,8 +13,8 @@ function ScannedContent({ id }) {
     <ScannedContentStyled $themeData={useContext(AppContext).themeData}>
       <div className="scanned-content">
         <img src={content.path} alt={content.title} />
-        <h2>{content.title}</h2>
-        <p>{content.description}</p>
+        <h2>{content.nombre}</h2>
+        <p>{content.descripcion}</p>
       </div>
     </ScannedContentStyled>
   );

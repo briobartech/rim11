@@ -12,7 +12,7 @@ export function AppContextProvider(props) {
   const [cargando, setCargando] = useState(true);
   const [languaje, setLanguaje] = useState("spanish");
   const [themeDataSelected, setThemeData] = useState(themeData["original"]);
-  const [result, setResult] = useState("id001");
+  const [result, setResult] = useState("");
 
   useEffect(() => {
     const cargarDatos = async () => {
@@ -25,24 +25,7 @@ export function AppContextProvider(props) {
     cargarDatos();
   }, []); // El array vacío asegura que se ejecute solo una vez al montar el componente
 
-  const encontrarDatoPorId = () => {
-    if (!datos) {
-      console.warn(
-        "Búsqueda cancelada: Los datos del CSV aún no se han cargado."
-      );
-      return;
-    }
 
-    if (datos[result]) {
-      console.log("Dato encontrado:", datos[result]);
-      // setResultado(datosCompletos[id]);
-    } else {
-      console.log("ID no encontrado:", id);
-      // setResultado(null);
-    }
-  };
-  // Llamar a la función para buscar el dato por ID
-  console.log(encontrarDatoPorId());
 
   const handleScan = (data) => {
     if (data) setResult(data.text);
@@ -78,6 +61,7 @@ export function AppContextProvider(props) {
         textStyle: textStyle,
         languaje: languaje,
         setLanguaje: handleLangClick,
+        datos: datos,
       }}
     >
       {props.children}

@@ -6,15 +6,15 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import ScannedContent from "./scanned-content";
 import { useContext } from "react";
 import { AppContext } from "./app-context.jsx";
-import { images } from "../assets/sources.js";
+
 import NavBar from "./navbar";
 
 function ScannerPage() {
   const qrManager = useContext(AppContext);
 
   const handleScan = (data) => {
-    console.log(images[data] ? true : false);
-    return images[data] ? true : false;
+    console.log(useContext(AppContext).datos[data] ? true : false);
+    return useContext(AppContext).datos[data] ? true : false;
   };
 
   return (

@@ -41,14 +41,15 @@ export async function convertirCsvAObjeto(filePath) {
       // Evitar líneas vacías
       if (linea.trim() === "") return acc;
 
-      const [id, nombre, descripcion] = linea
-        .split(",")
+      const [id, nombre, descripcion, path] = linea
+        .split("|")
         .map((item) => item.trim());
 
       if (id) {
         acc[id] = {
           nombre: nombre || "",
           descripcion: descripcion || "",
+          path: path || ""
         };
       }
       return acc;

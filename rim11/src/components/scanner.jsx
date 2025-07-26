@@ -2,12 +2,12 @@ import styled, { keyframes } from "styled-components";
 import QrScanner from "react-qr-barcode-scanner";
 import { useContext } from "react";
 import { AppContext } from "./app-context.jsx";
-import { images } from "../assets/sources.js";
+
 
 function Scanner() {
   const qrManager = useContext(AppContext);
 
-  if (images[qrManager.qrData]) {
+  if (useContext(AppContext).datos[qrManager.qrData]) {
     return `Resultado: ${qrManager.qrData}`;
   } else if (qrManager.qrData === "") {
     return (
