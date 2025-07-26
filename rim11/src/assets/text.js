@@ -1,5 +1,5 @@
 import { readCSVtoArray } from "./csv_to_array.js";
-import { path } from "./app-context.jsx";
+import { path } from "../components/app-context.jsx";
 export const texts = {
   home: {
     spanish: `Fundado el 8 de noviembre de 1825 por iniciativa del Gral. San Martín, el RIM 11 fue una pieza clave del Ejército de los Andes. 
