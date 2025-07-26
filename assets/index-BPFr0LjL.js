@@ -1199,7 +1199,7 @@ background-color: ${({$themeData:e})=>e.background};
       font-size: ${({$textStyle:e})=>e.content["font-size2"]};
     }
     p {
-    width: 80%;
+    width: 90%;
       font-size: calc(
         ${({$textStyle:e})=>e.content["font-size1"]} + 0.5em
       );
