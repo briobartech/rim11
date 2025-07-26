@@ -779,10 +779,10 @@ z-index: 1;
 @media (max-width: 480px) {
 
 
-  bottom: 0px;
+  bottom: -10px;
      .tour-btn {
-    width: 120px;
-    height: 120px;
+    width: 96px;
+    height: 96px;
      }
     .tour-text {
     width: 100%;
@@ -794,8 +794,8 @@ z-index: 1;
         border: 3px solid ${({$themeData:e})=>e.background2};
 }
     .qr-bg {
-    width: 64px;
-    height: 64px;}
+    width: 48px;
+    height: 48px;}
     
 }
     
@@ -1154,7 +1154,7 @@ background-color: ${({$themeData:e})=>e.background};
   margin-top: 1rem;
   font-size: 1.2rem;
   color: #333;
-`;function qC({id:e}){const t=L.useContext(At).datos[e];return t?G.jsx(ZC,{$textStyle:L.useContext(At).textStyle,$themeData:L.useContext(At).themeData,children:G.jsxs("div",{className:"scanned-content",children:[G.jsx("img",{src:t.path,alt:t.title}),G.jsx("h2",{children:t.nombre}),G.jsx("p",{children:t.descripcion})]})}):G.jsx("div",{children:"ID no encontrado en sources.images"})}const ZC=ge.div`
+`;function qC({id:e}){const t=L.useContext(At).datos[e];return t?G.jsx(ZC,{$textStyle:L.useContext(At).textStyle,$themeData:L.useContext(At).themeData,children:G.jsxs("div",{className:"scanned-content",children:[G.jsx("img",{src:t.path,alt:t.title}),G.jsx("h2",{children:t.nombre}),G.jsx("div",{className:"text-content",children:t.descripcion})]})}):G.jsx("div",{children:"ID no encontrado en sources.images"})}const ZC=ge.div`
  
   .scanned-content {
     display: flex;
@@ -1179,10 +1179,11 @@ background-color: ${({$themeData:e})=>e.background};
     margin: 20px;
     text-transform: capitalize;
   }
-  p {
-    width: 90%;
-    overflow-wrap: break-word;
+  .text-content {
+    width: 100%;
+    height: 120px;
     overflow-y: auto;
+    box-sizing: border-box;
     text-align: center;
     font-size: 2em;
     color: ${({$themeData:e})=>e.text1};
@@ -1198,25 +1199,27 @@ background-color: ${({$themeData:e})=>e.background};
     h2 {
       font-size: ${({$textStyle:e})=>e.content["font-size2"]};
     }
-    p {
-    width: 90%;
+    .text-content {
+    
       font-size: calc(
         ${({$textStyle:e})=>e.content["font-size1"]} + 0.5em
       );
     }
   @media (max-width: 480px) {
+  height: 600px;
     img {
       width: 100%;
       max-width: 320px;
       height: 340px;
     }
     h2 {
-      font-size: ${({$textStyle:e})=>e.content["font-size2"]};
+      font-size: calc(${({$textStyle:e})=>e.content["font-size1"]} + .5em);
     }
-    p {
+    .text-content {
       font-size: calc(
-        ${({$textStyle:e})=>e.content["font-size1"]} + 0.5em
+        ${({$textStyle:e})=>e.content["font-size1"]} + .2em
       );
+      
     }
   }
 `;function $C(){const e=L.useContext(At),t=n=>(console.log(!!L.useContext(At).datos[n]),!!L.useContext(At).datos[n]);return G.jsx(G.Fragment,{children:G.jsxs(WC,{$themeData:L.useContext(At).themeData,children:[G.jsxs(G.Fragment,{children:[t(e.qrData)?G.jsx("div",{className:"nav-bar",children:G.jsx("li",{children:G.jsx(Da,{to:"/scanner",onClick:()=>e.setQrData(""),children:G.jsx(Jr,{icon:My})})})}):G.jsx("div",{style:{display:"none"}}),G.jsx("div",{className:"scanner-container",children:t(e.qrData)?G.jsx(qC,{id:e.qrData}):G.jsx(zC,{})})]}),G.jsx(Cf,{})]})})}const WC=ge.div`
@@ -1341,7 +1344,9 @@ max-width:1080px;
     min-height: 300px;
     text-indent: 56px;
     padding-top: 0;
+    overflow-y: auto;
   }
+
   .sub-title {
     font-family: ${({$textStyle:e})=>e.content["font-family"]};
     font-size: ${({$textStyle:e})=>e.content["font-size4"]};
@@ -1375,7 +1380,7 @@ max-width:1080px;
     }
     .text-content {
       font-size: calc(
-        ${({$textStyle:e})=>e.content["font-size2"]} - 0.7em
+        ${({$textStyle:e})=>e.content["font-size2"]} - 1em
       );
       text-indent: 16px;
     }
