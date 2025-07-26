@@ -1,7 +1,7 @@
 import Banner from './components/banner.jsx'
 import NavBar from './components/navbar.jsx'
 import styled from 'styled-components'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom'
 import ScannerPage from './components/scanner-page.jsx'
 import HomeContent from './components/home-content.jsx'
 import InfoPage from './components/info-page.jsx'
