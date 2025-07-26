@@ -752,7 +752,7 @@ z-index: 1;
 `;function XE({onClose:e}){return G.jsxs(YE,{$textStyle:F.useContext(St).textStyle,$themeData:F.useContext(St).themeData,children:[G.jsxs("div",{className:"menu-nav-bar",children:[G.jsx("li",{onClick:e,children:G.jsx(Jr,{icon:My})}),G.jsx("li",{className:"languaje-btn",onClick:F.useContext(St).setLanguaje,children:(()=>{switch(F.useContext(St).languaje){case"spanish":return"Español";case"english":return"English";case"portugues":return"Português";default:return"Idioma no reconocido"}})()})]}),G.jsx(qE,{$textStyle:F.useContext(St).textStyle,$themeData:F.useContext(St).themeData,children:G.jsxs("ul",{className:"menu-options",children:[G.jsx("li",{onClick:F.useContext(St).handleThemeChange,children:F.useContext(St).themeData.name}),G.jsx("li",{children:"Opción 2"}),G.jsx("li",{children:"Opción 3"}),G.jsx("li",{children:"Opción 4"})]})})]})}const YE=ge.div`
   position: absolute;
   bottom: 128px;
-  right: 0;
+  
   width: 100%;
   width: 1080px;
   height: 36%;
@@ -762,6 +762,7 @@ z-index: 1;
   
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
   li svg {
     font-size: 64px;
     position: relative;
@@ -1028,7 +1029,7 @@ max-width:1080px;
   align-items: center;
   justify-content: space-between;
   background-color: ${({$themeData:e})=>e.background};
-
+  margin: 0 auto;
   .nav-bar li svg {
     font-size: 32px;
   }
@@ -1083,13 +1084,25 @@ max-width:1080px;
  
 `;function QC(){return G.jsx(JC,{$textStyle:F.useContext(St).textStyle,$themeData:F.useContext(St).themeData,children:G.jsx("div",{className:"home-content",children:G.jsxs("div",{className:"app-container",children:[G.jsxs("div",{className:"app-header",children:[G.jsx(U0,{}),G.jsx(q6,{})]}),G.jsx("h2",{className:"sub-title",children:"Bienvenido al Rim11 APP"}),G.jsx("p",{className:"text-content",children:$g.home[F.useContext(St).languaje]}),G.jsx(Cf,{})]})})})}const JC=ge.div`
     background-color: ${({$themeData:e})=>e.background};
+    .home-content {
+    width: 100%;
+    height: 100hv;
+    max-width: 1080px;
+    max-height: 1920px;
+    margin: 0 auto;
+  
 
-
+}
  .app-container{
-
-    
+    width: 100%;
+    height: 100hv;
+    max-width: 1080px;
+    max-height: 1920px;
     background-color: ${({$themeData:e})=>e.background};
-   
+      display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: space-between;
     }
  .text-content{
     background-color: ${({$themeData:e})=>e.background};
@@ -1147,6 +1160,7 @@ max-width:1080px;
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
+    margin: 0 auto;
   }
 
   .info-page {
@@ -1197,16 +1211,19 @@ max-width:1080px;
   }
 `;function nb(){const[e,t]=F.useState(null);return F.useEffect(()=>{V6.then(n=>t(n))},[]),G.jsx(G.Fragment,{children:G.jsxs(rb,{$textStyle:F.useContext(St).textStyle,$themeData:F.useContext(St).themeData,children:[G.jsxs("div",{className:"contact-page-content",children:[G.jsx(U0,{}),G.jsxs("div",{className:"contact-page-container",children:[G.jsx("div",{className:"title",children:"Información de contacto"}),e?Object.entries(e).map(([n,r])=>G.jsxs("div",{className:"contact-info",children:[G.jsxs("p",{className:"item",children:[n,":"]},n),G.jsx("p",{className:"value",children:r},r)]},n)):"Loading..."]})]}),G.jsx(Cf,{})]})})}const rb=ge.div`
   width: 100%;
+  height: 100hv;
   max-width: 1080px;
-  height: 100vh;
+  max-height: 1920px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  margin: 0 auto;
   background-color: ${({$themeData:e})=>e.background};
-    .contact-info {
+  .contact-info {
     display: flex;
-    flex-direction: row;}
+    flex-direction: row;
+  }
   .contact-page-content {
     background: ${({$themeData:e})=>e.background};
     display: flex;
@@ -1214,6 +1231,7 @@ max-width:1080px;
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    padding-bottom: 96px;
   }
   .contact-page-container {
     display: flex;
@@ -1222,7 +1240,8 @@ max-width:1080px;
     justify-content: center;
     width: 90%;
     max-width: 1080px;
-
+    min-height: fit-content;
+  
   }
   .title {
     font-family: ${({$textStyle:e})=>e.content["font-family"]};
@@ -1234,11 +1253,10 @@ max-width:1080px;
     box-shadow: 0 4px 8px #0001;
     text-shadow: 3px 3px 8px ${({$themeData:e})=>e.text3}4;
   }
-    .contact-info {
+  .contact-info {
     display: flex;
     flex-direction: column;
-    
-   }
+  }
   .contact-info p {
     margin: 20px;
   }
@@ -1247,17 +1265,16 @@ max-width:1080px;
     font-size: ${({$textStyle:e})=>e.content["font-size4"]};
     font-weight: ${({$textStyle:e})=>e.content["font-weight"]};
     color: ${({$themeData:e})=>e.text1};
-    
   }
-    .contact-info .value {
+  .contact-info .value {
     font-family: ${({$textStyle:e})=>e.content["font-family"]};
     font-size: ${({$textStyle:e})=>e.content["font-size4"]};
     font-weight: ${({$textStyle:e})=>e.content["font-weight"]};
     color: ${({$themeData:e})=>e.text2};
-    
   }
-    .item::first-letter {
-    text-transform: capitalize;}
+  .item::first-letter {
+    text-transform: capitalize;
+  }
 `;function ab(){return G.jsx(G.Fragment,{children:G.jsx(ib,{$themeData:F.useContext(St).themeData,children:G.jsx(IE,{children:G.jsxs(lE,{children:[G.jsx($o,{path:"/rim11",element:G.jsx(QC,{})}),G.jsx($o,{path:"/scanner",element:G.jsx(WC,{})}),G.jsx($o,{path:"/info",element:G.jsx(tb,{})}),G.jsx($o,{path:"/contact",element:G.jsx(nb,{})})]})})})})}const ib=ge.div`
     background-color: ${({$themeData:e})=>e.background};
     height: 100vh;
