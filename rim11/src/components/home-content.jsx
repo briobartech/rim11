@@ -33,16 +33,13 @@ export default HomeContent;
 
 const HomeContentStyled = styled.div`
     background-color: ${({ $themeData }) => $themeData.background};
-    height: 100vh;
-    width:100%;
-    max-width:1080px;
-    height: 100vh;
+
 
  .app-container{
-    width:100%;
-    max-width:1080px;
+
+    
     background-color: ${({ $themeData }) => $themeData.background};
-    height: 100vh;
+   
     }
  .text-content{
     background-color: ${({ $themeData }) => $themeData.background};
@@ -66,9 +63,6 @@ const HomeContentStyled = styled.div`
     width: 100%;
     padding-left: 220px;
   }
-  .home-content {
-    width: 1080px;
-  }
 
   .app-container {
     position: absolute;
@@ -78,7 +72,7 @@ const HomeContentStyled = styled.div`
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 100vh;
+
     background-color: ${({ $themeData }) => $themeData.background};
   }
 }
