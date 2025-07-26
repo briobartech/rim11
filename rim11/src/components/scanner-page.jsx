@@ -55,7 +55,7 @@ max-width:1080px;
   align-items: center;
   justify-content: space-between;
   background-color: ${({ $themeData }) => $themeData.background};
-
+  margin: 0 auto;
   .nav-bar li svg {
     font-size: 32px;
   }

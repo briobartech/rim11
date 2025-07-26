@@ -33,13 +33,25 @@ export default HomeContent;
 
 const HomeContentStyled = styled.div`
     background-color: ${({ $themeData }) => $themeData.background};
+    .home-content {
+    width: 100%;
+    height: 100hv;
+    max-width: 1080px;
+    max-height: 1920px;
+    margin: 0 auto;
+  
 
-
+}
  .app-container{
-
-    
+    width: 100%;
+    height: 100hv;
+    max-width: 1080px;
+    max-height: 1920px;
     background-color: ${({ $themeData }) => $themeData.background};
-   
+      display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: space-between;
     }
  .text-content{
     background-color: ${({ $themeData }) => $themeData.background};

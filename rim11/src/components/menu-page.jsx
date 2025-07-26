@@ -49,7 +49,7 @@ export default MenuPage
 const MenuStyled = styled.div`
   position: absolute;
   bottom: 128px;
-  right: 0;
+  
   width: 100%;
   width: 1080px;
   height: 36%;
@@ -59,6 +59,7 @@ const MenuStyled = styled.div`
   
   border-radius: 8px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+
   li svg {
     font-size: 64px;
     position: relative;
