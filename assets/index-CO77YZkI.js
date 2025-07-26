@@ -957,7 +957,7 @@ background-color: ${({$themeData:e})=>e.background};
      @media (max-width: 480px) {
      .navbar-box {
     
-    height: 96px;
+    height: 64px;
 } 
      .navbar-list li svg {
     font-size: 32px;}
@@ -999,6 +999,15 @@ background-color: ${({$themeData:e})=>e.background};
       );
     }
   }
+
+  @media (max-width: 480px) {
+    p {
+      text-align: center;
+      font-size: calc(
+        ${({$textStyle:e})=>e.content["font-size1"]} 
+      );
+    }
+  }
 `,HC=ge.div`
   display: flex;
   flex-direction: column;
@@ -1027,12 +1036,21 @@ background-color: ${({$themeData:e})=>e.background};
       width: 80%;
     }
   }
+
+   @media (max-width: 480px) {
+    .scanner-container {
+      width: 100%;
+    }
+  }
 `,jC=ge.div`
 @media (max-width: 768px) {
  width: 360px;
   height: 360px;
 }
-
+@media (max-width: 480px) {
+ width: 240px;
+  height: 240px;
+}
   position: relative;
   width: 512px;
   height: 512px;
@@ -1060,6 +1078,9 @@ background-color: ${({$themeData:e})=>e.background};
     height: 80% !important;
     border-radius: 18px;
     }
+
+ 
+    
 `,GC=ge.div`
   pointer-events: none;
   position: absolute;
@@ -1155,7 +1176,7 @@ justify-content: center;
     font-size: 2em;
     color: ${({$themeData:e})=>e.text1};};
     padding: 0 20px;}
-`;function $C(){const e=F.useContext(St),t=n=>(console.log(!!F.useContext(St).datos[n]),!!F.useContext(St).datos[n]);return G.jsx(G.Fragment,{children:G.jsxs(WC,{$themeData:F.useContext(St).themeData,children:[G.jsx("div",{className:"nav-bar",children:t(e.qrData)?G.jsx("li",{children:G.jsx(Da,{to:"/scanner",onClick:()=>e.setQrData(""),children:G.jsx(Jr,{icon:My})})}):G.jsx(G.Fragment,{})}),G.jsx("div",{className:"scanner-container",children:t(e.qrData)?G.jsx(qC,{id:e.qrData}):G.jsx(zC,{})}),G.jsx(Cf,{})]})})}const WC=ge.div`
+`;function $C(){const e=F.useContext(St),t=n=>(console.log(!!F.useContext(St).datos[n]),!!F.useContext(St).datos[n]);return G.jsx(G.Fragment,{children:G.jsxs(WC,{$themeData:F.useContext(St).themeData,children:[t(e.qrData)?G.jsx("li",{children:G.jsx(Da,{to:"/scanner",onClick:()=>e.setQrData(""),children:G.jsx(Jr,{icon:My})})}):G.jsx(G.Fragment,{}),G.jsx("div",{className:"scanner-container",children:t(e.qrData)?G.jsx(qC,{id:e.qrData}):G.jsx(zC,{})}),G.jsx(Cf,{})]})})}const WC=ge.div`
 width: 100%;
 max-width:1080px;
   height: 100vh;
@@ -1203,6 +1224,14 @@ max-width:1080px;
   .nav-bar a:hover {
     color: ${({$themeData:e})=>e.text1}; /* o el color que prefieras al pasar el mouse */
   }
+
+
+  @media (max-width: 480px) {
+ 
+.scanner-container {
+
+justify-content: start;
+}
 `;function U0(){return G.jsx(KC,{$textStyle:F.useContext(St).textStyle,$themeData:F.useContext(St).themeData,children:G.jsx("div",{className:"title-container",children:G.jsx("h1",{children:"Rim11"})})})}const KC=ge.div`
   .title-container {
     display: flex;
