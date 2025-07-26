@@ -7,7 +7,7 @@ export const AppContext = createContext();
 
 const LANGS = ["spanish", "english", "portugues"];
 
-const path = "http://qr-historico.space/rim11/";
+export const path = "http://qr-historico.space/rim11/";
 export function AppContextProvider(props) {
   const [datos, setDatos] = useState(null);
   const [cargando, setCargando] = useState(true);
