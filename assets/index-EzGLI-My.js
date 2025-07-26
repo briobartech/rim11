@@ -831,7 +831,7 @@ z-index: 1;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
   }
   
-`;function Cf(){const[e,t]=F.useState(!1);return G.jsx(ZE,{$themeData:F.useContext(St).themeData,children:G.jsxs("div",{className:"navbar-box",children:[G.jsxs("ul",{className:"navbar-list",children:[G.jsx("li",{children:G.jsxs(Da,{to:"/",children:[" ",G.jsx(Jr,{icon:g8})]})}),G.jsx("li",{children:G.jsx(Da,{to:"/contact",children:G.jsx(Jr,{icon:v8})})}),G.jsx("li",{className:"scan-btn",children:G.jsx(Da,{to:"/scanner",children:G.jsx(GE,{})})}),G.jsx("li",{children:G.jsx(Da,{to:"/info",children:G.jsx(Jr,{icon:p8})})}),G.jsx("li",{children:G.jsx("span",{onClick:()=>t(!e),style:{cursor:"pointer"},children:G.jsx(Jr,{icon:h8})})})]}),e&&G.jsx(XE,{onClose:()=>t(!1)})]})})}const ZE=ge.div`
+`;function Cf(){const[e,t]=F.useState(!1);return G.jsx(ZE,{$themeData:F.useContext(St).themeData,children:G.jsxs("div",{className:"navbar-box",children:[G.jsxs("ul",{className:"navbar-list",children:[G.jsx("li",{children:G.jsxs(Da,{to:"/rim11",children:[" ",G.jsx(Jr,{icon:g8})]})}),G.jsx("li",{children:G.jsx(Da,{to:"/contact",children:G.jsx(Jr,{icon:v8})})}),G.jsx("li",{className:"scan-btn",children:G.jsx(Da,{to:"/scanner",children:G.jsx(GE,{})})}),G.jsx("li",{children:G.jsx(Da,{to:"/info",children:G.jsx(Jr,{icon:p8})})}),G.jsx("li",{children:G.jsx("span",{onClick:()=>t(!e),style:{cursor:"pointer"},children:G.jsx(Jr,{icon:h8})})})]}),e&&G.jsx(XE,{onClose:()=>t(!1)})]})})}const ZE=ge.div`
 z-index: 3;
 .navbar-list li svg {
     font-size: 64px;
@@ -1083,16 +1083,13 @@ max-width:1080px;
  
 `;function QC(){return G.jsx(JC,{$textStyle:F.useContext(St).textStyle,$themeData:F.useContext(St).themeData,children:G.jsx("div",{className:"home-content",children:G.jsxs("div",{className:"app-container",children:[G.jsxs("div",{className:"app-header",children:[G.jsx(U0,{}),G.jsx(q6,{})]}),G.jsx("h2",{className:"sub-title",children:"Bienvenido al Rim11 APP"}),G.jsx("p",{className:"text-content",children:$g.home[F.useContext(St).languaje]}),G.jsx(Cf,{})]})})})}const JC=ge.div`
     background-color: ${({$themeData:e})=>e.background};
-    height: 100vh;
-    width:100%;
-    max-width:1080px;
-    height: 100vh;
+
 
  .app-container{
-    width:100%;
-    max-width:1080px;
+
+    
     background-color: ${({$themeData:e})=>e.background};
-    height: 100vh;
+   
     }
  .text-content{
     background-color: ${({$themeData:e})=>e.background};
@@ -1116,9 +1113,6 @@ max-width:1080px;
     width: 100%;
     padding-left: 220px;
   }
-  .home-content {
-    width: 1080px;
-  }
 
   .app-container {
     position: absolute;
@@ -1128,7 +1122,7 @@ max-width:1080px;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    height: 100vh;
+
     background-color: ${({$themeData:e})=>e.background};
   }
 }
@@ -1265,24 +1259,8 @@ max-width:1080px;
     .item::first-letter {
     text-transform: capitalize;}
 `;function ab(){return G.jsx(G.Fragment,{children:G.jsx(ib,{$themeData:F.useContext(St).themeData,children:G.jsx(IE,{children:G.jsxs(lE,{children:[G.jsx($o,{path:"/rim11",element:G.jsx(QC,{})}),G.jsx($o,{path:"/scanner",element:G.jsx(WC,{})}),G.jsx($o,{path:"/info",element:G.jsx(tb,{})}),G.jsx($o,{path:"/contact",element:G.jsx(nb,{})})]})})})})}const ib=ge.div`
-
-  .app-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    width:100%;
-    max-width: 1080px;
-    margin: 0 auto;
-  }
-  .app-container {
-    position: absolute;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
- 
     background-color: ${({$themeData:e})=>e.background};
-  }
+    height: 100vh;
+    width:100%;
+
 `;H3.createRoot(document.getElementById("root")).render(G.jsx(F.StrictMode,{children:G.jsx(Y6,{children:G.jsx(ab,{})})}));
