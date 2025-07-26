@@ -14,14 +14,14 @@ function App () {
   return (
     <>
       <AppStyled $themeData={useContext(AppContext).themeData}>
-        <BrowserRouter>
+        <HashRouter basename="/" >
           <Routes>
             <Route path='/' element={<HomeContent />} />
             <Route path='/scanner' element={<ScannerPage />} />
             <Route path='/info' element={<InfoPage />} />
             <Route path='/contact' element={<ContactPage />} />
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </AppStyled>
     </>
   )
