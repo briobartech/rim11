@@ -4,6 +4,6 @@ import react from '@vitejs/plugin-react'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: 'http://qr-historico.space/',
+  base: 'https://qr-historico.space/',
   plugins: [react()],
 })
