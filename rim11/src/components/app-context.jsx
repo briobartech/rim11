@@ -59,8 +59,7 @@ export function AppContextProvider(props) {
         textStyle: textStyle,
         languaje: languaje,
         setLanguaje: handleLangClick,
-        datos: datos,
-        path: path,
+        datos: datos
       }}
     >
       {props.children}
