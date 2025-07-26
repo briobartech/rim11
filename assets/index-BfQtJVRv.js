@@ -1275,7 +1275,7 @@ max-width:1080px;
   .item::first-letter {
     text-transform: capitalize;
   }
-`;function ab(){return G.jsx(G.Fragment,{children:G.jsx(ib,{$themeData:F.useContext(St).themeData,children:G.jsx(IE,{children:G.jsxs(lE,{children:[G.jsx($o,{path:"/rim11",element:G.jsx(QC,{})}),G.jsx($o,{path:"/scanner",element:G.jsx(WC,{})}),G.jsx($o,{path:"/info",element:G.jsx(tb,{})}),G.jsx($o,{path:"/contact",element:G.jsx(nb,{})})]})})})})}const ib=ge.div`
+`;function ab(){return G.jsx(G.Fragment,{children:G.jsx(ib,{$themeData:F.useContext(St).themeData,children:G.jsx(IE,{children:G.jsxs(lE,{children:[G.jsx($o,{path:"/",element:G.jsx(QC,{})}),G.jsx($o,{path:"/scanner",element:G.jsx(WC,{})}),G.jsx($o,{path:"/info",element:G.jsx(tb,{})}),G.jsx($o,{path:"/contact",element:G.jsx(nb,{})})]})})})})}const ib=ge.div`
     background-color: ${({$themeData:e})=>e.background};
     height: 100vh;
     width:100%;
