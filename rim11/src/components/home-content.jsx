@@ -35,7 +35,8 @@ const HomeContentStyled = styled.div`
     background-color: ${({ $themeData }) => $themeData.background};
     .home-content {
     width: 100%;
-    height: 100hv;
+    height: 100vh;
+
     max-width: 1080px;
     max-height: 1920px;
     margin: 0 auto;
@@ -44,7 +45,8 @@ const HomeContentStyled = styled.div`
 }
  .app-container{
     width: 100%;
-    height: 100hv;
+    height: 100vh;
+
     max-width: 1080px;
     max-height: 1920px;
     background-color: ${({ $themeData }) => $themeData.background};

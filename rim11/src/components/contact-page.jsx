@@ -45,7 +45,8 @@ export default ContactPage;
 
 const ContactPageStyled = styled.div`
   width: 100%;
-  height: 100hv;
+  height: 100vh;
+
   max-width: 1080px;
   max-height: 1920px;
   display: flex;
