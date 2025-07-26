@@ -7,7 +7,6 @@ export const AppContext = createContext();
 
 const LANGS = ["spanish", "english", "portugues"];
 
-export const path = "http://qr-historico.space/rim11/";
 export function AppContextProvider(props) {
   const [datos, setDatos] = useState(null);
   const [cargando, setCargando] = useState(true);
@@ -18,7 +17,7 @@ export function AppContextProvider(props) {
   useEffect(() => {
     const cargarDatos = async () => {
       // La ruta es relativa a la carpeta 'public'
-      const datosProcesados = await convertirCsvAObjeto(path + "bbdd.csv");
+      const datosProcesados = await convertirCsvAObjeto("bbdd.csv");
       setDatos(datosProcesados);
       setCargando(false);
     };
