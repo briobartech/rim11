@@ -110,8 +110,21 @@ const ContactPageStyled = styled.div`
     @media (max-width: 768px) {
     
     .title{
-    font-size: calc(${({ $textStyle }) => $textStyle.content["font-size4"]} - 1em);
+    font-size: calc(${({ $textStyle }) =>
+      $textStyle.content["font-size4"]} - 1em);
     }
     .contact-info{
-    font-size: calc(${({ $textStyle }) => $textStyle.content["font-size1"]} - .5em);    }
+    font-size: calc(${({ $textStyle }) =>
+      $textStyle.content["font-size1"]} - .5em);    }
+
+ @media (max-width: 480px) {
+.title{
+    font-size: calc(${({ $textStyle }) =>
+      $textStyle.content["font-size4"]} - 1.2em);
+    }
+    .contact-info{
+    font-size: calc(${({ $textStyle }) =>
+      $textStyle.content["font-size1"]} - .7em);    }
+}
+
 `;

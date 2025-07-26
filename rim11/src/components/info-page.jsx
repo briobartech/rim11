@@ -139,5 +139,17 @@ const InfoPageStyled = styled.div`
 
   padding-bottom: 160px;
     font-size: ${({ $textStyle }) => $textStyle.content["font-size2"]};
+}
 
+ @media (max-width: 480px) {
+.title {
+    font-size: ${({ $textStyle }) => $textStyle.content["font-size2"]};
+    width: 100%;
+    text-align: center;
+    text-align: left; /* mejor que center para subtítulo */
+  }
+.info-page p {
+font-size: calc(${({ $textStyle }) => $textStyle.content["font-size1"]} + .5em);
+}
+ 
 `;

@@ -64,7 +64,7 @@ const HomeContentStyled = styled.div`
     font-weight: ${({ $textStyle }) => $textStyle.content["font-weight"]};
     font-family: ${({ $textStyle }) => $textStyle.content["font-family"]};
     line-height: ${({ $textStyle }) => $textStyle.content["line-height"]};
-    padding: 10%;
+    padding: 0 5%;
     min-height: 300px;
     text-indent: 56px;
     padding-top: 0;
@@ -92,5 +92,25 @@ const HomeContentStyled = styled.div`
 
     background-color: ${({ $themeData }) => $themeData.background};
   }
+
+  @media (max-width: 480px) {
+
+  .app-header{
+  width: 100%;}
+.sub-title { font-size: calc(
+        ${({ $textStyle }) => $textStyle.content["font-size3"]} - 0.5em
+      );
+    }
+    .text-content {
+      font-size: calc(
+        ${({ $textStyle }) => $textStyle.content["font-size2"]} - 0.7em
+      );
+      text-indent: 16px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    
+}
 }
 `;

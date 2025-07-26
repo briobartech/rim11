@@ -41,4 +41,12 @@ const StyledBanner = styled.div`
       ${({ $themeData }) => $themeData.background}  100%
     );
   }
+
+  @media (max-width: 480px) {
+img {
+width: 100%;
+  height: 200px; /* o el valor que quieras */
+  object-fit: cover;
+}
+}
 `;

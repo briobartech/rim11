@@ -138,4 +138,28 @@ z-index: 1;
     .qr-bg {
     width: 96px;
     height: 96px;}
+}
+
+@media (max-width: 480px) {
+     
+     .tour-btn {
+    width: 120px;
+    height: 120px;
+     }
+    .tour-text {
+    width: 100%;
+    font-size: 1.2em;}
+    .corner {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+        border: 3px solid ${({ $themeData }) => $themeData.background2};
+}
+    .qr-bg {
+    width: 64px;
+    height: 64px;}
+    
+}
+    
 `;
+
