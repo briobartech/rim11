@@ -1180,7 +1180,7 @@ background-color: ${({$themeData:e})=>e.background};
     text-transform: capitalize;
   }
   p {
-    width: 100%;
+    width: 90%;
     overflow-wrap: break-word;
     overflow-y: auto;
     text-align: center;
@@ -1199,6 +1199,7 @@ background-color: ${({$themeData:e})=>e.background};
       font-size: ${({$textStyle:e})=>e.content["font-size2"]};
     }
     p {
+    width: 80%;
       font-size: calc(
         ${({$textStyle:e})=>e.content["font-size1"]} + 0.5em
       );
@@ -1227,7 +1228,7 @@ max-width:1080px;
   align-items: center;
   justify-content: space-between;
   background-color: ${({$themeData:e})=>e.background};
-  margin: 0 auto;
+  
   .nav-bar li svg {
     font-size: 32px;
   }
@@ -1267,13 +1268,12 @@ max-width:1080px;
     color: ${({$themeData:e})=>e.text1}; /* o el color que prefieras al pasar el mouse */
   }
 
+  @media (max-width: 768px) {
+    .scanner-container {
+      width: 80%;
+    }
+  }
 
-  @media (max-width: 480px) {
-  height: 100vh;
-.scanner-container {
-
-justify-content: space-between;
-}
 `;function U0(){return G.jsx(KC,{$textStyle:L.useContext(At).textStyle,$themeData:L.useContext(At).themeData,children:G.jsx("div",{className:"title-container",children:G.jsx("h1",{children:"Rim11"})})})}const KC=ge.div`
   .title-container {
     display: flex;
@@ -1362,7 +1362,6 @@ justify-content: space-between;
     align-items: center;
     justify-content: space-between;
     width: 100%;
-
     background-color: ${({$themeData:e})=>e.background};
   }
 
