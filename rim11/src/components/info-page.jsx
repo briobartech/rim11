@@ -55,7 +55,7 @@ const InfoPageStyled = styled.div`
   .info-page {
     position: relative;
 
-    background-image: url("/src/assets/img/info-bg.jpg");
+    background-image: url("/rim11/img/info-bg.jpg");
 
     background-size: cover;
     background-position: center;

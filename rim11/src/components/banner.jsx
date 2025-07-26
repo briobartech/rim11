@@ -7,7 +7,7 @@ function Banner() {
   
   return (
     <StyledBanner $themeData={useContext(AppContext).themeData}>
-      <img src="src\assets\img\banner.webp" alt="Banner" />
+      <img src="/rim11/img/banner.webp" alt="Banner" />
     </StyledBanner>
   );
 }
