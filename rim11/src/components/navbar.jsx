@@ -21,7 +21,7 @@ function NavBar () {
       <div className='navbar-box'>
         <ul className='navbar-list'>
           <li>
-           <Link to="/rim11"> <FontAwesomeIcon icon={faHouse} /></Link>
+           <Link to="/"> <FontAwesomeIcon icon={faHouse} /></Link>
           </li>
           <li>
             <Link to="/contact"><FontAwesomeIcon icon={faUser} /></Link>
