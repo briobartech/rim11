@@ -46,11 +46,13 @@ function NavBar () {
 export default NavBar
 const StyledNavBar = styled.div`
 z-index: 3;
+width: 100%;  
+background-color: ${({ $themeData }) => $themeData.background};
 .navbar-list li svg {
     font-size: 64px;
   }
   .navbar-box {
-    width: 1080px;
+    width: 100%;
     height: 128px;
     );
     display: flex;
@@ -85,4 +87,10 @@ z-index: 3;
   .navbar-list a:hover {
     color: ${({ $themeData }) => $themeData.text1}; /* o el color que prefieras al pasar el mouse */
   }
+     @media (max-width: 768px) {
+     
+     .navbar-list li svg {
+    font-size: 48px;}
+     }
+
 `

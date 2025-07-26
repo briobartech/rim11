@@ -40,6 +40,7 @@ const InfoPageStyled = styled.div`
     align-items: center;
     box-shadow: 0 4px 8px #0001;
     text-shadow: 3px 3px 8px ${({ $themeData }) => $themeData.text2};
+    padding-bottom: 36px;
   }
   .info-page-c {
     width: 100%;
@@ -50,20 +51,18 @@ const InfoPageStyled = styled.div`
     flex-direction: column;
     justify-content: space-between;
     height: 100vh;
-
     margin: 0 auto;
   }
 
   .info-page {
     position: relative;
-
     background-image: url("img/info-bg.jpg");
-
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     border-radius: 8px;
     overflow: hidden;
+    padding-bottom: 96px;
   }
 
   .info-page::before {
@@ -71,18 +70,19 @@ const InfoPageStyled = styled.div`
     position: absolute;
     inset: 0;
     background: ${({ $themeData }) => $themeData.background};
-    opacity: 0.7; 
+    opacity: 0.7;
     border-radius: 8px;
     z-index: 1;
     pointer-events: none;
+    
   }
 
   .info-page p {
     position: relative;
     z-index: 2;
-    height: 1100px;
+    height: 100%;
     overflow-y: auto;
-    padding: 16px;
+    
     color: ${({ $themeData }) => $themeData.text1};
     font-size: ${({ $textStyle }) => $textStyle.content["font-size3"]};
     font-weight: ${({ $textStyle }) => $textStyle.content["font-weight"]};
@@ -90,14 +90,54 @@ const InfoPageStyled = styled.div`
     line-height: ${({ $textStyle }) => $textStyle.content["line-height"]};
     text-align: center;
     border-radius: 8px;
-    padding-bottom: 120px;
-    background: transparent;
+    
     background: linear-gradient(
       to top,
       rgba(255, 255, 255, 0) 0%,
       rgba(255, 255, 255, 0) 85%,
-      
+
       ${({ $themeData }) => $themeData.background} 100%
     );
   }
+  @media (max-width: 768px) {
+  
+  .title {
+    font-size: ${({ $textStyle }) => $textStyle.content["font-size3"]};
+    text-align: left;
+    padding-inline-start: 16px; /* sangría interna sin romper layout */
+    box-sizing: border-box;
+  }
+
+  .home-content {
+    padding: 0 10px;
+    max-width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .app-container {
+    padding: 0 10px;
+    max-width: 100%;
+    max-height: none;
+    position: relative;
+    box-sizing: border-box;
+  }
+
+  .text-content {
+    padding: 5%;
+    font-size: ${({ $textStyle }) => $textStyle.content["font-size2"]};
+    text-indent: 24px;
+  }
+
+  .sub-title {
+    font-size: ${({ $textStyle }) => $textStyle.content["font-size5"]};
+    padding-left: 20px;
+    text-align: left; /* mejor que center para subtítulo */
+  }
+
+  .info-page p {
+
+  padding-bottom: 160px;
+    font-size: ${({ $textStyle }) => $textStyle.content["font-size2"]};
+
 `;

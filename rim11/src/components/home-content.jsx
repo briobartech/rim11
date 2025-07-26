@@ -33,6 +33,8 @@ export default HomeContent;
 
 const HomeContentStyled = styled.div`
     background-color: ${({ $themeData }) => $themeData.background};
+   width: 100%;
+    height: 100vh;
     .home-content {
     width: 100%;
     height: 100vh;
@@ -74,8 +76,9 @@ const HomeContentStyled = styled.div`
     color: ${({ $themeData }) => $themeData.text2};
     margin: 20px 0;
     text-align: left;
+  text-indent: 32px;
     width: 100%;
-    padding-left: 220px;
+    
   }
 
   .app-container {

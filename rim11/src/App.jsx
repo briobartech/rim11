@@ -30,8 +30,5 @@ function App () {
 export default App
 
 const AppStyled = styled.div`
-    background-color: ${({$themeData}) => $themeData.background};
-    height: 100vh;
-    width:100%;
-
+    
 `

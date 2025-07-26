@@ -15,7 +15,7 @@ function Banner() {
 export default Banner;
 const StyledBanner = styled.div`
   position: relative;
-  width: 1080px;
+  width: 100%
   overflow: hidden;
 
   img {

@@ -44,11 +44,8 @@ function ContactPage() {
 export default ContactPage;
 
 const ContactPageStyled = styled.div`
-  width: 100%;
-  height: 100vh;
-
-  max-width: 1080px;
-  max-height: 1920px;
+   width: 100%;
+    height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,7 +82,7 @@ const ContactPageStyled = styled.div`
     color: ${({ $themeData }) => $themeData.subtitle};
     padding-top: 48px;
     padding-bottom: 96px;
-    box-shadow: 0 4px 8px #0001;
+    
     text-shadow: 3px 3px 8px ${({ $themeData }) => $themeData.text3}4;
   }
   .contact-info {
@@ -110,4 +107,11 @@ const ContactPageStyled = styled.div`
   .item::first-letter {
     text-transform: capitalize;
   }
+    @media (max-width: 768px) {
+    
+    .title{
+    font-size: calc(${({ $textStyle }) => $textStyle.content["font-size4"]} - 1em);
+    }
+    .contact-info{
+    font-size: calc(${({ $textStyle }) => $textStyle.content["font-size1"]} - .5em);    }
 `;

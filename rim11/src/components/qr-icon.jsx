@@ -1,6 +1,6 @@
 import React from "react";
 
-const QRCodeIcon = ({ color, size = 120, ...props }) => (
+const QRCodeIcon = ({ color, ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="100%"
@@ -8,7 +8,7 @@ const QRCodeIcon = ({ color, size = 120, ...props }) => (
     viewBox="0 0 368 368"
     fill="none"
     stroke="none"
-    style={{ color, width: size, height: size, display: "block" }}
+    style={{ color, display: "block" }}
     {...props}
   >
     <path

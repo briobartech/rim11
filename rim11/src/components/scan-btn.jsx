@@ -4,7 +4,6 @@ import QRCodeIcon from "./qr-icon.jsx";
 import { useContext } from "react";
 import { AppContext } from "./app-context.jsx";
 
-
 function ScanButton() {
   return (
     <StyledScanButton $themeData={useContext(AppContext).themeData}>
@@ -15,7 +14,11 @@ function ScanButton() {
           <span className="corner bl"></span>
           <span className="corner br"></span>
         </div>
-        <QRCodeIcon className="qr-bg" size={118} color={useContext(AppContext).themeData.background2} />
+        <QRCodeIcon
+          className="qr-bg"
+          
+          color={useContext(AppContext).themeData.background2}
+        />
         <div className="tour-text">TOUR</div>
       </div>
     </StyledScanButton>
@@ -115,7 +118,24 @@ z-index: 1;
     transform: translate(-50%, -50%);
     z-index: 1;
     pointer-events: none;
-    width: 140px;
-    height: 140px;
+    width: 120px;
+    height: 120px;
   }
+
+  @media (max-width: 768px) {
+     
+     .tour-btn {
+    width: 160px;
+    height: 160px;
+     }
+    .tour-text {
+    width: 100%;
+    font-size: 1.5em;}
+    .corner {
+    position: absolute;
+    width: 32px;
+    height: 32px;}
+    .qr-bg {
+    width: 96px;
+    height: 96px;}
 `;
